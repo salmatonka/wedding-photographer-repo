@@ -11,7 +11,7 @@ const Home = () => {
             <Slider></Slider>
             <Service></Service>
             <Elopement></Elopement>
-            
+            <ChoosePlan></ChoosePlan>
         </div>
     );
 };
