@@ -23,7 +23,7 @@ const Header = () => {
             <Link rel="noopener noreferrer" to="/" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</Link>
           </li>
           <li className="flex">
-            <Link rel="noopener noreferrer" to="/" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Link</Link>
+            <Link rel="noopener noreferrer" to="/blog" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Blog</Link>
           </li>
         </ul>
         <div className="items-center flex-shrink-0 hidden lg:flex">
