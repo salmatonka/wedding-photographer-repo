@@ -2,36 +2,37 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
+	const handlesignup =event =>{
+		event.preventDefault ();
+		
+
+	  }
     return (
-        <div className="flex flex-col max-w-md p-6 rounded-md sm:p-10 dark:bg-gray-900 dark:text-gray-100">
-	<div className="mb-8 text-center">
-		<h1 className="my-3 text-4xl font-bold">Sign in</h1>
-		<p className="text-sm dark:text-gray-400">Sign in to access your account</p>
-	</div>
-	<form novalidate="" action="" className="space-y-12 ng-untouched ng-pristine ng-valid">
-		<div className="space-y-4">
-			<div>
-				<label for="email" className="block mb-2 text-sm">Email address</label>
-				<input type="email" name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" />
-			</div>
-			<div>
-				<div className="flex justify-between mb-2">
-					<label for="password" className="text-sm">Password</label>
-					<a rel="noopener noreferrer" href="#" className="text-xs hover:underline dark:text-gray-400">Forgot password?</a>
+        <section className="p-6 dark:bg-gray-800 dark:text-gray-100">
+	<div className="container grid gap-6 mx-auto text-center lg:grid-cols-2 xl:grid-cols-5">
+		<div className="w-full px-6 py-16 rounded-md sm:px-12 md:px-16 xl:col-span-2 dark:bg-gray-900">
+			
+			<h1 className="text-5xl font-extrabold dark:text-gray-50">Register to access your account</h1>
+			
+			<form onSubmit={handlesignup} novalidate="" action="" className="self-stretch space-y-3 ng-untouched ng-pristine ng-valid">
+				<div>
+					<label for="name" className="text-sm sr-only">Your name</label>
+					<input id="name" type="text" placeholder="Your name" className="w-full rounded-md focus:ring focus:ring-violet-400 dark:border-gray-700" />
 				</div>
-				<input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" />
-			</div>
+				<div>
+					<label for="firstname" className="text-sm sr-only"></label>
+					<input id="firsttname" type="text" placeholder="Email address" className="w-full rounded-md focus:ring focus:ring-violet-400 dark:border-gray-700" />
+				</div>
+				<div>
+					<label for="lastname" className="text-sm sr-only"></label>
+					<input id="lastname" type="text" placeholder="Your Password" className="w-full rounded-md focus:ring focus:ring-violet-400 dark:border-gray-700" />
+				</div>
+				<Link to='/register'><button type="button" className="w-full py-2 mt-3 font-semibold rounded bg-violet-400 dark:text-gray-900">Register</button></Link>
+			</form>
 		</div>
-		<div className="space-y-2">
-			<div>
-				<button type="button" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-400 dark:text-gray-900">Sign in</button>
-			</div>
-			<p className="px-6 text-sm text-center dark:text-gray-400">Don't have an account yet?
-				<a rel="noopener noreferrer" href="#" className="hover:underline dark:text-violet-400">Sign up</a>.
-			</p>
-		</div>
-	</form>
-</div>
+		<img src="https://mybangla24.com/static/img/blog/photography-services-bangladesh.webp" alt="" className="object-cover w-full rounded-md xl:col-span-3 dark:bg-gray-500" />
+	</div>
+</section>
     );
 };
 

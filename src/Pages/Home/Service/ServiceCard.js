@@ -64,7 +64,7 @@ const ServiceCard = ({Service}) => {
 			<p className="text-sm">
 				{description}
 			</p>
-			<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900">Read More </button>
+			<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:text-gray-900">Read More </button>
 		</div>
 	</div>
 </div>
