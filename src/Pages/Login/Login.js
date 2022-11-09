@@ -16,17 +16,17 @@ const Login = () => {
 	<h1 className="text-2xl font-bold text-center">Login</h1>
 	<form onSubmit={handleLogin} novalidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
 		<div className="space-y-1 text-sm">
-			<label for="username" className="block dark:text-gray-400">Username</label>
-			<input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+			<label for="email" className="block dark:text-gray-400">Email</label>
+			<input type="text" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" required />
 		</div>
 		<div className="space-y-1 text-sm">
 			<label for="password" className="block dark:text-gray-400">Password</label>
-			<input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" />
+			<input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400" required />
 			<div className="flex justify-end text-xs dark:text-gray-400">
 				<Link rel="noopener noreferrer" href="#">Forgot Password?</Link>
 			</div>
 		</div>
-		<button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 bg-violet-400">Sign in</button>
+		<button type='submit' className="block w-full p-3 text-center rounded-sm dark:text-gray-900 bg-violet-400">Login</button>
 	</form>
 	<div className="flex items-center pt-4 space-x-1">
 		<div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
