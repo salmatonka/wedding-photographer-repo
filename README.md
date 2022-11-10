@@ -1,6 +1,6 @@
 # My Project: wedding-photographer
 
-# Getting Started with Create React App
+### Getting Started with Create React App
 
 This project was Mamba ui with [Create React App](https://www.google.com/search?q=mamba+ui&rlz=1C1GIWA_enBD1020BD1020&oq=&aqs=chrome.1.69i59i450l8.18762982j0j15&sourceid=chrome&ie=UTF-8).
 
