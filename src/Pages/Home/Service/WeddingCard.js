@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useSetTitle from '../../../hooks/useSetTitle';
 
 const WeddingCard = ({service}) => {
+	useSetTitle ('WeddingCard')
     const {_id,name,img,price,rating,description} = service ;
     return (
         <div className="rounded-md shadow-md  dark:bg-gray-900 dark:text-gray-100">
@@ -61,9 +63,9 @@ const WeddingCard = ({service}) => {
 		</div>
 		<div className="space-y-3">
 			<p className="text-sm">
-				{description.length > 100? description.slice(1,100) +  "..." : description}
+				{description.length > 100? description.slice(0,100) +  "..." : description}
 			</p>
-			<Link to={`/details/${_id}`}><button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:text-gray-900">Details </button></Link>
+			<Link to={`/servicePages/${_id}`}><button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:text-gray-900">Details </button></Link>
 		</div>
 	</div>
 </div>

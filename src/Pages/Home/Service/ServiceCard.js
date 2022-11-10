@@ -62,7 +62,7 @@ const ServiceCard = ({Service}) => {
 		</div>
 		<div className="space-y-3">
 			<p className="text-sm">
-				{description}
+			{description.length > 100? description.slice(0,100) +  "..." : description}
 			</p>
 			<button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:text-gray-900">Read More </button>
 		</div>

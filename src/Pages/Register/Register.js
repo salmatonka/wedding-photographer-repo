@@ -1,12 +1,16 @@
 
 import React from 'react';
 import {useContext} from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate,useLocation } from 'react-router-dom';
 import {toast} from 'react-toastify';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Register = () =>{
-
+	const navigate = useNavigate()
+	const location = useLocation()
+	useSetTitle('Register')
+	const from = location.state?.from?.pathname || '/'
       const{createUser,updateName,handleGoogleAdd} = useContext(AuthContext)
 
     const handleRegister = event =>{
@@ -45,6 +49,7 @@ const Register = () =>{
 		handleGoogleAdd()
 		.then(result=>{
 			console.log(result.user)
+			navigate(from, { replace: true })
 		})
 	}
 

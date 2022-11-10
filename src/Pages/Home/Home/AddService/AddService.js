@@ -1,9 +1,11 @@
 import React from 'react';
+import useSetTitle from '../../../../hooks/useSetTitle';
 
 const AddService = () => {
+    useSetTitle('AddService')
     return (
         <div>
-            <h2>yyyy</h2>
+            <h2>hello </h2>
         </div>
     );
 };

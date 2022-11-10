@@ -1,9 +1,9 @@
 import React from 'react';
 import {createContext} from 'react';
 import app from '../../firebase/firebase.config';
-import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from 'firebase/auth';
+import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged,  signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from 'firebase/auth';
 import {useState,useEffect} from 'react'
-import { toast } from 'react-toastify';
+
 import { GoogleAuthProvider } from 'firebase/auth';
 
 
@@ -14,47 +14,53 @@ const AuthProvider = ({children}) => {
 
     const provider = new GoogleAuthProvider()
      
-      const [user,setUser] = useState(null);
+      const [user,setUser] = useState({});
       const [loading,setLoading] = useState(true);
       
       const createUser = (email,password)=>{
+        setLoading(true)
         return createUserWithEmailAndPassword(auth,email,password);
       }
       const updateName = (name)=>{
+        setLoading(true)
         return updateProfile(auth.currentUser,{displayName:name})
       }
       
 
       const login = (email,password) =>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth,email,password)
       }
 
-     
+      
+      const handleGoogleAdd = () =>{
+        // console.log('google handle')
+        setLoading(true)
+       return signInWithPopup(auth,provider)
+        
+        
+      }
+      
+      const logout =()=>{
+        setLoading(true)
+        return signOut(auth)
+      }
+
+
       useEffect(()=>{
        const unsubscribe = onAuthStateChanged(auth,currentUser=>{
             console.log(currentUser);
             setUser(currentUser);
+            setLoading(false)
+            
         });
-        
         return()=>{
- 
+  
             return unsubscribe();
         }
-
+  
       },[])
-
-      const handleGoogleAdd = () =>{
-        // console.log('google handle')
-		signInWithPopup(auth,provider)
-	
-  }
    
-  const logout =()=>{
-    return signOut(auth)
-  }
-   
-
-
      const authInfo ={
        user,
        loading,

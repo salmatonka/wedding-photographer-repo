@@ -5,8 +5,9 @@ import Blog from '../../Pages/Home/Blog/Blog';
 import AddService from '../../Pages/Home/Home/AddService/AddService';
 import Home from '../../Pages/Home/Home/Home';
 import MyReview from '../../Pages/Home/Home/MyReview/MyReview';
-import Details from '../../Pages/Home/Service/Details';
+
 import Service from '../../Pages/Home/Service/Service';
+import ServicePages from '../../Pages/Home/Service/ServicePages/ServicePages';
 import Login from '../../Pages/Login/Login';
 import Register from '../../Pages/Register/Register';
 import PrivateRoute from './PrivateRoute';
@@ -28,22 +29,19 @@ const  router = createBrowserRouter([
             {
                 path:'/service',
                 element:<Service></Service>,
-                // loader:({params})=>{
-                //     fetch(`http://localhost:5000/services/&{params.id}`)
-                // }
-            },
-            {
-                path:'/details',
-                element:<Details></Details>,
                 
             },
+            
             {
-                path:'/details/:id',
-                element:<Details></Details>,
+                path:'/servicePages/:id',
+                element:<ServicePages></ServicePages>,
                 loader:({params})=>{
                     fetch(`http://localhost:5000/services/${params.id}`)
                 }
+                
             },
+            
+            
             
             {
                 path:'/login',

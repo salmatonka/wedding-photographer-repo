@@ -1,12 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext,useState  } from 'react';
 import { Link,useLocation,useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import {toast} from 'react-toastify';
+import useSetTitle from '../../hooks/useSetTitle';
 
 const Login = () => {
-
+    const [userEmail, setUserEmail] = useState('')
 	const navigate = useNavigate()
 	const location = useLocation()
+
+	useSetTitle('Login')
 	const from = location.state?.from?.pathname || '/'
      
 	const {login,signInWithGoogle} = useContext(AuthContext);
@@ -28,9 +31,9 @@ const Login = () => {
 			console.log(result.user)
 			toast.success('Login success...!!')
 
-              navigate(from, {replace:true})         
+			navigate(from, { replace: true })         
 
-		}).catch(error=>toast.error('Login Failed...!!'))
+		}).catch(error=>toast.error(error.message))
 	
 	}
 
@@ -38,6 +41,7 @@ const Login = () => {
              signInWithGoogle()
 			 .then(result=> {
 				  console.log(result.user)
+				  navigate(from, { replace: true })
 			 })
 				
 		  }

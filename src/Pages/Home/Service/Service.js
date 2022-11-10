@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
+import useSetTitle from '../../../hooks/useSetTitle';
 import ItemCard from './ItemCard';
 
 
 
 const Service = () => {
-    
+    useSetTitle('Service')
     return (
 
       <div >

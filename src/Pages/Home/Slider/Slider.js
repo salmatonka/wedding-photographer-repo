@@ -1,7 +1,7 @@
 import React from 'react';
-import img1 from '../../../assets/images/Devon_wedding_photographer_0018.jpg';
-import img2 from '../../../assets/images/010-galway-downs-temecula-wedding-photography-1000x667.jpg';
-import img3 from '../../../assets/images/Tareq-with-Xinat.jpg';
+import img1 from '../../../assets/images/shutterstock_483957421.webp';
+import img2 from '../../../assets/images/pexels-asad-photo-maldives-169203.jpg';
+import img3 from '../../../assets/images/pexels-ankur-kumar-3872626.jpg';
 import Carousel from 'react-bootstrap/Carousel';
 const Slider = () => {
     return (
