@@ -19,7 +19,7 @@ This project was Mamba ui with [Create React App](https://www.google.com/search?
 1. firebae;
 
 ### Link:
-1. server-side code: () 
-2. Live website link: ()
+1. server-side code: (https://wedding-photographer-server.vercel.app/) ;
+2. Live website link: (https://wedding-photo-a24f5.web.app/)
 
 
