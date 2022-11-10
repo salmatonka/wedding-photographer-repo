@@ -6,7 +6,7 @@ import ServiceCard from './ServiceCard'
 const ServiceItems = () => {
     const [photos,setPhotos] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000')
         .then(res=>res.json())
         .then(data=>setPhotos(data))
     },[])

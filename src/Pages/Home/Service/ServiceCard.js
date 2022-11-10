@@ -10,8 +10,8 @@ const ServiceCard = ({Service}) => {
 		<div className="d-flex justify-content-center space-x-5">
 			<img src={img} alt="" className="object-cover object-center w-8 h-8 rounded-full shadow-sm dark:bg-gray-500 dark:border-gray-700" />
 			<div className="-space-y-1">
-				<h2 className="text-sm font-semibold leading-none">{rating}</h2>
-				<span className="inline-block text-xs leading-none dark:text-gray-400">{price}</span>
+				<h2 className="text-sm font-semibold leading-none">Rating: {rating}</h2>
+				<span className="inline-block text-xs leading-none dark:text-gray-400">Price: {price}</span>
 			</div>
 		</div>
 		<button title="Open options" type="button">
