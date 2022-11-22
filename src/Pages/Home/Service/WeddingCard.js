@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useSetTitle from '../../../hooks/useSetTitle';
-
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+//service:6cards
 const WeddingCard = ({service}) => {
 	useSetTitle ('WeddingCard')
-    const {_id,name,img,price,rating,description} = service ;
+    const {_id,title,img,price,rating,description} = service ;
     return (
         <div className="rounded-md shadow-md  dark:bg-gray-900 dark:text-gray-100">
 	<div className="flex items-center justify-between p-3">
@@ -23,9 +24,15 @@ const WeddingCard = ({service}) => {
 			</svg>
 		</button>
 	</div>
-	<img src={img} alt="" className="object-cover object-center w-full h-72 dark:bg-gray-500" />
+
+	<PhotoProvider>
+      <PhotoView src={img}>
+        <img className='cursor-zoom-in object-cover w-full ' src={img} alt="" />
+      </PhotoView>
+    </PhotoProvider>
+	
 	<div className="p-3">
-		<div className="flex items-center justify-between">
+    <div className="flex items-center justify-between">
 			<div className="flex items-center space-x-3">
 				<button type="button" title="Like post" className="flex items-center justify-center">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current">
@@ -56,7 +63,7 @@ const WeddingCard = ({service}) => {
 					<img src={img} alt="" className="w-5 h-5 border rounded-full dark:bg-gray-500 dark:border-gray-800"  />
 					<img src={img} alt="" className="w-5 h-5 border rounded-full dark:bg-gray-500 dark:border-gray-800"  />
 				</div>
-				<h1 className="text-xl">{name}
+				<h1 className="text-xl">{title}
 					
 				</h1>
 			</div>
@@ -65,7 +72,7 @@ const WeddingCard = ({service}) => {
 			<p className="text-sm">
 				{description.length > 100? description.slice(0,100) +  "..." : description}
 			</p>
-			<Link to={`/servicePages/${_id}`}><button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:text-gray-900">Details </button></Link>
+			<Link to={`/servicePages/${_id}`}><button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 dark:text-gray-900">Details</button></Link>
 		</div>
 	</div>
 </div>

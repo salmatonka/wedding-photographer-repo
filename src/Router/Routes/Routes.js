@@ -1,15 +1,15 @@
 import {createBrowserRouter} from 'react-router-dom'
 import Main from '../../layout/Main'
+
 import ErrorPage from '../../Pages/ErrorPage/ErrorPage';
 import Blog from '../../Pages/Home/Blog/Blog';
-import AddService from '../../Pages/Home/Home/AddService/AddService';
 import Home from '../../Pages/Home/Home/Home';
-import MyReview from '../../Pages/Home/Home/MyReview/MyReview';
-
+import AddService from '../../Pages/Home/Service/AddService/AddService';
 import Service from '../../Pages/Home/Service/Service';
 import ServicePages from '../../Pages/Home/Service/ServicePages/ServicePages';
 import Login from '../../Pages/Login/Login';
 import Register from '../../Pages/Register/Register';
+import Reviews from '../../Pages/Reviews/Reviews';
 import PrivateRoute from './PrivateRoute';
 
 const  router = createBrowserRouter([
@@ -31,34 +31,36 @@ const  router = createBrowserRouter([
                 element:<Service></Service>,
                 
             },
-            
             {
-                path:'/servicePages/:id',
+                path:'/servicePages',
                 element:<ServicePages></ServicePages>,
-                loader:({params})=>{
-                    fetch(`http://localhost:5000/services/${params.id}`)
-                }
+                
+            },
+            {
+                path:'/addService',
+                element:<AddService></AddService>,
                 
             },
             
-            
+            {
+                path:'/servicePages/:id',
+                element:<PrivateRoute><ServicePages></ServicePages></PrivateRoute>,
+                loader:({params})=>
+                    fetch(`https://wedding-photo-server.vercel.app/services/${params.id}`)
+                
+                
+            },
             
             {
                 path:'/login',
                 element:<Login></Login>
             },
+           
             {
-                path:'/addService',
-                element:<PrivateRoute>
-                    <AddService></AddService>
-                </PrivateRoute>
+                path:'/reviews',
+                 element:<PrivateRoute><Reviews></Reviews></PrivateRoute>
             },
-            {
-                path:'/myReview',
-                element:<PrivateRoute>
-                  <MyReview></MyReview>
-                     </PrivateRoute>
-            },
+           
             {
                 path:'/register',
                 element:<Register></Register>

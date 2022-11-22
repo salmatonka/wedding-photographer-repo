@@ -13,8 +13,8 @@ const Slider = () => {
                   alt="First slide"
                 />
                 <Carousel.Caption className='text-white'>
-                  <h5>Wedding Photographer</h5>
-                  <p>Not just another pretty dress.Your wedding is a personal story that we are there to document. </p>
+                  <h5 className='text-blue-600 lg:text-5xl text-xl '>Wedding Photographer</h5>
+                  <p className='text-blue-600 lg:text-2xl '>Not just another pretty dress.Your wedding is a personal story that we are there to document. </p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -24,8 +24,8 @@ const Slider = () => {
                   alt="Second slide"
                 />
                 <Carousel.Caption className='text-white'>
-                  <h5>Wedding Photographer</h5>
-                  <p>Not just another pretty dress.Your wedding is a personal story that we are there to document. </p>
+                  <h5 className='text-blue-600 lg:text-5xl text-xl'>Wedding Photographer</h5>
+                  <p className='text-blue-600 lg:text-2xl'>Not just another pretty dress.Your wedding is a personal story that we are there to document. </p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -35,8 +35,8 @@ const Slider = () => {
                   alt="Third slide"
                 />
                 <Carousel.Caption className='text-white'>
-                  <h5>Wedding Photographer</h5>
-                  <p>Not just another pretty dress.Your wedding is a personal storthat we are there to document. </p>
+                  <h5 className='text-blue-600 lg:text-5xl text-xl'>Wedding Photographer</h5>
+                  <p className='text-blue-600 lg:text-2xl'>Not just another pretty dress.Your wedding is a personal storthat we are there to document. </p>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>

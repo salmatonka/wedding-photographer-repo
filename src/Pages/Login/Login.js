@@ -1,11 +1,11 @@
-import React, { useContext,useState  } from 'react';
+import React, { useContext  } from 'react';
 import { Link,useLocation,useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import {toast} from 'react-toastify';
 import useSetTitle from '../../hooks/useSetTitle';
 
 const Login = () => {
-    const [userEmail, setUserEmail] = useState('')
+    // const [userEmail, setUserEmail] = useState('')
 	const navigate = useNavigate()
 	const location = useLocation()
 
@@ -24,14 +24,34 @@ const Login = () => {
 		const email = form.email.value;
 		const password = form.password.value;
 
-		console.log(email,password)
+		// console.log(email,password)
 
 		login(email,password)
 		.then(result =>{
-			console.log(result.user)
+			const user = result.user;
+			
+			const currentUser={
+				
+				email: user.email
+			}
+			console.log(currentUser);
 			toast.success('Login success...!!')
+              
+			fetch('https://wedding-photo-server.vercel.app/jwt',{
+				method:'POST',
+				headers: {
+					'content-type': 'application/json'
+				},
+				body: JSON.stringify(currentUser)
+			})
+			.then(res=> res.json())
+			.then(data =>{
+				console.log(data);
+				 localStorage.setItem('token',data.token)
+				
+			})
 
-			navigate(from, { replace: true })         
+			   navigate(from, { replace: true })         
 
 		}).catch(error=>toast.error(error.message))
 	

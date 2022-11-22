@@ -27,18 +27,33 @@ const Header = () => {
           
           {user?.email ? <>
     
-           
-           <li className="flex">
-            <Link rel="noopener noreferrer" to="/servicePages" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Service Pages</Link></li>
-
-            <li className="flex">
-            <Link rel="noopener noreferrer" to="/addService" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Add Service</Link></li>
-
           <li className="flex">
-            <Link rel="noopener noreferrer" to="/myReview" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">My Review</Link>
+            <Link rel="noopener noreferrer" to="/reviews" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Reviews</Link>
+          </li>
+         
+          <li className="flex">
+            <Link rel="noopener noreferrer" to="/addService" className="flex items-center px-4 -mb-1 border-b-2 dark:border-transparent">Add Service</Link>
           </li>
          
           <li> <Link to="/home"><button onClick={handleLogout} className="self-center px-8 py-3 rounded">Logout</button></Link></li>
+          <div>
+          <span > <img src={user?.photoURL
+
+
+             ? user.photoURL
+
+
+         : <p className='text-sky-400 text-sm'>no photo</p> }
+            alt=""
+             style={{height:'40px'}}/> </span>
+
+            <h4 className='text-blue-600 text-xl'>{
+        user?.displayName ? user.displayName:'name Not Found'}</h4>
+
+         </div>
+
+
+
           </> :
 
         <li className="items-center flex-shrink-0 hidden lg:flex">
@@ -48,7 +63,7 @@ const Header = () => {
         <li className="items-center flex-shrink-0 hidden lg:flex">
           <Link to="/blog"><button className="self-center px-8 py-3 rounded">BLog</button></Link>
         </li>
-          
+
      </ul>
         <button className="p-4 lg:hidden">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-gray-100">
@@ -57,14 +72,7 @@ const Header = () => {
         </button>
          
          </div>
-    </header>
-
-
-  
-        
-
-
-        
+    </header>    
     );
 };
 

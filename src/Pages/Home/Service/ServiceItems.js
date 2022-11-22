@@ -3,10 +3,11 @@ import {useState} from 'react';
 import {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import ServiceCard from './ServiceCard'
+//3cards
 const ServiceItems = () => {
     const [photos,setPhotos] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000')
+        fetch('https://wedding-photo-server.vercel.app')
         .then(res=>res.json())
         .then(data=>setPhotos(data))
     },[])

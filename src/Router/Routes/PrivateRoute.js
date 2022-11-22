@@ -4,9 +4,9 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import Spinner from '../../Pages/Spinner';
 
 const PrivateRoute = ({children}) => {
-    const {user,loading} =useContext(AuthContext)
-    const location = useLocation()
-    console.log(loading)
+    const {user,loading} =useContext(AuthContext);
+    const location = useLocation();
+    console.log(loading);
 
 
     if (loading){
@@ -15,8 +15,8 @@ const PrivateRoute = ({children}) => {
     }
 
 
-    if (user && user.id){
-    return children
+    if (user ){
+    return children;
         
 }
 

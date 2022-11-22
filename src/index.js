@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
