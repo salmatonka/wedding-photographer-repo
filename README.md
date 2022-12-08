@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# My Project: wedding-photographer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Getting Started with Create React App
 
-## Available Scripts
+This project was Mamba ui with [Create React App](https://www.google.com/search?q=mamba+ui&rlz=1C1GIWA_enBD1020BD1020&oq=&aqs=chrome.1.69i59i450l8.18762982j0j15&sourceid=chrome&ie=UTF-8).
 
-In the project directory, you can run:
+### Installer: 
+1.  "firebase": (https://www.google.com/search?q=firebase&rlz=1C1GIWA_enBD1020BD1020&oq=&aqs=chrome.3.69i59i450l8.19003845j0j15&sourceid=chrome&ie=UTF-8)
+2.  "flowbite": (https://www.google.com/search?q=flowbite&rlz=1C1GIWA_enBD1020BD1020&oq=flo&aqs=chrome.0.69i59j0i433i512j69i57j0i433i512j46i433i512j0i433i512l2j0i512j46i131i433i512j0i512.2572j0j15&sourceid=chrome&ie=UTF-8) ,
+  
+ 3.  "react-router-dom": (https://www.google.com/search?q=react+router&rlz=1C1GIWA_enBD1020BD1020&ei=0RptY4K1L8Kx4-EP39KksA8&oq=rea&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgDMgoIABCxAxCDARBDMgQIABBDMgQIABBDMgQIABBDMgQIABBDMgUIABCABDIICAAQsQMQgwEyDgguEIAEELEDEMcBENEDMgsIABCABBCxAxCDATIICAAQgAQQsQM6CggAEEcQ1gQQsAM6BwgAELADEEM6CgguEMcBENEDEENKBAhNGAFKBAhBGABKBAhGGABQqgVYmQtgjh5oAXABeACAAc4BiAG6BJIBBTAuMi4xmAEAoAEByAEKwAEB&sclient=gws-wiz-serp) ,
+    "react-toastify"
 
-### `npm start`
+4. "react-toastify": (https://www.google.com/search?q=react+toastify&rlz=1C1GIWA_enBD1020BD1020&oq=re&aqs=chrome.2.69i59l3j69i57j0i131i433i512j46i131i199i433i465i512j46i199i433i465i512j0i131i433i512j0i433i512j0i512.1925j0j15&sourceid=chrome&ie=UTF-8),
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Deployment:
 
-### `npm test`
+1. firebae;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Link:
+1. server-side code: (https://wedding-photo-server.vercel.app/) ;
+2. Live website link: (https://wedding-photo-a24f5.web.app/)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
