@@ -6,19 +6,19 @@ import Spinner from '../../Pages/Spinner';
 const PrivateRoute = ({children}) => {
     const {user,loading} =useContext(AuthContext);
     const location = useLocation();
-    console.log(loading);
+    // console.log(loading);
 
 
-    if (loading){
+//     if (loading){
 
-        return <Spinner></Spinner>
-    }
+//         return <Spinner></Spinner>
+//     }
 
 
-    if (user ){
-    return children;
+//     if (user ){
+//     return children;
         
-}
+// }
 
 return <Navigate to='/login' state={{ from: location }} replace />
 

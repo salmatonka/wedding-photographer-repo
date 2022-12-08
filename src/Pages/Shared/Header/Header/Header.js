@@ -37,13 +37,10 @@ const Header = () => {
          
           <li> <Link to="/home"><button onClick={handleLogout} className="self-center px-8 py-3 rounded">Logout</button></Link></li>
           <div>
-          <span > <img src={user?.photoURL
+          <span > <img src={user?.photoURL ? user.photoURL
 
 
-             ? user.photoURL
-
-
-         : <p className='text-sky-400 text-sm'>no photo</p> }
+         : <p className='text-black text-sm'>no photo</p> }
             alt=""
              style={{height:'40px'}}/> </span>
 

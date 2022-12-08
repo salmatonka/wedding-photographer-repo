@@ -28,7 +28,7 @@ const CheckOut = () => {
 
 
 		}
-       fetch('https://wedding-photo-server.vercel.app/reviews',{
+       fetch('http://localhost:5000/reviews',{
 		method: "POST",
 		headers: {
 			"content-type" : "application/json",
@@ -59,13 +59,13 @@ const CheckOut = () => {
 			<p className="font-medium">{title}</p>
 			  <div className="col-span-full">
 					
-					<div className="flex items-center space-x-2">
+					 <div className="flex items-center space-x-2">
 						<img src={img} alt="" className="w-32 h-32 rounded-full dark:bg-gray-500 dark:bg-gray-700" />
 						
-					</div>
+					</div> 
 				</div>
-				<p className="font-medium">price: {price}</p>
-				<p className="font-medium">rating: {rating}</p>
+				 <p className="font-medium">price: {price}</p>
+				 <p className="font-medium">rating: {rating}</p> 
 				</div>
 			
 			<div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">

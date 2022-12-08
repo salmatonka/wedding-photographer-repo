@@ -9,7 +9,7 @@ const Reviews = () => {
     
      
     useEffect(()=>{
-        fetch(`https://wedding-photo-server.vercel.app/reviews?email=${user.email}`,{
+        fetch(`http://localhost:5000/reviews?email=${user.email}`,{
           headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
         }
@@ -26,7 +26,7 @@ const Reviews = () => {
     const handleReviewDelete = id =>{
         const proceed = window.confirm('are you sure,you want to delete review');
         if(proceed){
-            fetch(`https://wedding-photo-server.vercel.app/reviews/${id}`,{
+            fetch(`http://localhost:5000/reviews/${id}`,{
                 method: "DELETE",
                 headers: {
                   authorization: `Bearer ${localStorage.getItem('token')}`
@@ -44,7 +44,7 @@ const Reviews = () => {
       }
      
       const handleUpdate = id =>{
-        fetch(`https://wedding-photo-server.vercel.app/reviews/${id}`,{
+        fetch(`http://localhost:5000/reviews/${id}`,{
             method: 'PATCH',
             headers: {
                 'content-type' : 'application/json',
@@ -71,7 +71,7 @@ const Reviews = () => {
     return (
      
 <div>
-<h1 className="text-xl font-semibold sm:text-4xl text-center text-blue-600 py-3">Selected your reviews: {reviews.length}</h1> 
+<h1 className="text-xl font-semibold sm:text-4xl text-center text-blue-600 py-3">Selected your reviews: {reviews?.length}</h1> 
 
  <div className="overflow-x-auto w-full">
   <table className="table w-full">
@@ -92,14 +92,14 @@ const Reviews = () => {
       <tbody>
      
        {
-         reviews.map(review =><ReviewAdd
+         reviews?.map(review =><ReviewAdd
        key={review._id}
          review={review}
          handleReviewDelete={handleReviewDelete}
          handleUpdate={handleUpdate}
          ></ReviewAdd>)
-       }
-      
+       }  
+       
       
         </tbody>
      </table>

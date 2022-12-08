@@ -44,9 +44,10 @@ const  router = createBrowserRouter([
             
             {
                 path:'/servicePages/:id',
-                element:<PrivateRoute><ServicePages></ServicePages></PrivateRoute>,
+                // element:<PrivateRoute><ServicePages></ServicePages></PrivateRoute>,
+                element:<ServicePages></ServicePages>,
                 loader:({params})=>
-                    fetch(`https://wedding-photo-server.vercel.app/services/${params.id}`)
+                    fetch(`http://localhost:5000/services/${params.id}`)
                 
                 
             },
@@ -58,7 +59,9 @@ const  router = createBrowserRouter([
            
             {
                 path:'/reviews',
-                 element:<PrivateRoute><Reviews></Reviews></PrivateRoute>
+                //  element:<PrivateRoute><Reviews></Reviews></PrivateRoute>
+
+             element:<Reviews></Reviews>
             },
            
             {

@@ -27,7 +27,7 @@ const WeddingCard = ({service}) => {
 
 	<PhotoProvider>
       <PhotoView src={img}>
-        <img className='cursor-zoom-in object-cover w-full ' src={img} alt="" />
+        <img alt="" className='cursor-zoom-in object-cover w-full ' src={img}  />
       </PhotoView>
     </PhotoProvider>
 	
