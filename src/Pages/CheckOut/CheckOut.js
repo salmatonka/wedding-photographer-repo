@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const CheckOut = () => {
@@ -28,7 +28,7 @@ const CheckOut = () => {
 
 
 		}
-       fetch('http://localhost:5000/reviews',{
+       fetch('https://wedding-server-eight.vercel.app/reviews',{
 		method: "POST",
 		headers: {
 			"content-type" : "application/json",
@@ -53,7 +53,7 @@ const CheckOut = () => {
     return (
         <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
 	<form onSubmit={handlePlaceReview} novalidate="" action="" className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
-	<h2 className="text-2xl font-semibold sm:text-4xl text-center text-blue-600 ">Add Service</h2>
+	<h2 className="text-2xl font-semibold sm:text-4xl text-center text-blue-600 ">Please Add To Services</h2>
 		<fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
 			<div className="space-y-2 col-span-full lg:col-span-1">
 			<p className="font-medium">{title}</p>

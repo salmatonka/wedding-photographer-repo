@@ -20,7 +20,7 @@ const AddService = () => {
             price: price,
             description: message
         }
-        fetch(`http://localhost:5000/users`,{
+        fetch(`https://wedding-server-eight.vercel.app/users`,{
             method: 'POST',
             headers:{
                 'content-type': 'application/json'

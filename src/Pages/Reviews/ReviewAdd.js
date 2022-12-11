@@ -6,7 +6,7 @@ const ReviewAdd = ({review,handleReviewDelete,handleUpdate}) => {
     const [reviewService, setReviewService] =useState({})
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/services/${service}`)
+        fetch(`https://wedding-server-eight.vercel.app/services/${service}`)
         .then(res => res.json())
         .then(data => setReviewService(data) )
     },[service])

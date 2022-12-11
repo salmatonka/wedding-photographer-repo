@@ -7,7 +7,7 @@ const ItemCard = () => {
 //service:6cards
     const [services,setServices] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://wedding-server-eight.vercel.app/services')
         .then(res=>res.json())
         .then(data=>setServices(data))
     },[])

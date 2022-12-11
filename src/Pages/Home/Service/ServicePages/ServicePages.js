@@ -1,9 +1,9 @@
 import React from 'react';
 import { useContext} from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 import CheckOut from '../../../CheckOut/CheckOut';
-import AddReviews from '../../../Reviews/AddReviews';
+
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ServicePages = () => {
@@ -76,12 +76,7 @@ const ServicePages = () => {
 				</div>
 			</div>
 			
-            <div>
-			 <AddReviews handleAddReview={handleAddReview}></AddReviews>
-			</div>
-
-
-			<div className="flex justify-center">
+        <div className="flex justify-center">
 				<CheckOut></CheckOut>
 				
 			</div>

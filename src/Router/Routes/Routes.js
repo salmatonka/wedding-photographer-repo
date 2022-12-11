@@ -47,7 +47,7 @@ const  router = createBrowserRouter([
                 // element:<PrivateRoute><ServicePages></ServicePages></PrivateRoute>,
                 element:<ServicePages></ServicePages>,
                 loader:({params})=>
-                    fetch(`http://localhost:5000/services/${params.id}`)
+                    fetch(`https://wedding-server-eight.vercel.app/services/${params.id}`)
                 
                 
             },

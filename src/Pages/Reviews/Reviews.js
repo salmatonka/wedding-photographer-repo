@@ -9,7 +9,7 @@ const Reviews = () => {
     
      
     useEffect(()=>{
-        fetch(`http://localhost:5000/reviews?email=${user.email}`,{
+        fetch(`https://wedding-server-eight.vercel.app/reviews?email=${user.email}`,{
           headers: {
             authorization: `Bearer ${localStorage.getItem('token')}`
         }
@@ -26,7 +26,7 @@ const Reviews = () => {
     const handleReviewDelete = id =>{
         const proceed = window.confirm('are you sure,you want to delete review');
         if(proceed){
-            fetch(`http://localhost:5000/reviews/${id}`,{
+            fetch(`https://wedding-server-eight.vercel.app/reviews/${id}`,{
                 method: "DELETE",
                 headers: {
                   authorization: `Bearer ${localStorage.getItem('token')}`
@@ -44,7 +44,7 @@ const Reviews = () => {
       }
      
       const handleUpdate = id =>{
-        fetch(`http://localhost:5000/reviews/${id}`,{
+        fetch(`https://wedding-server-eight.vercel.app/reviews/${id}`,{
             method: 'PATCH',
             headers: {
                 'content-type' : 'application/json',
